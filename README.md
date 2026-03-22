@@ -260,7 +260,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👨‍💻 Author
 
-**Omkar Hale**
+**Omkar Karhale**
 
 [![GitHub](https://img.shields.io/badge/GitHub-omkarhale-black?style=flat&logo=github)](https://github.com/omkarhale)
 
