@@ -1,0 +1,30 @@
+# ================================
+# .dockerignore
+# ================================
+# These files/folders are EXCLUDED
+# when Docker copies your project
+# into the container.
+# Think of it like .gitignore but for Docker
+# This makes builds faster & images smaller
+# ================================
+
+# Exclude compiled output (Docker will compile fresh)
+target/
+
+# Exclude IDE config folders
+.idea/
+.mvn/
+
+# Exclude git files
+.git/
+.gitignore
+.gitattributes
+
+# Exclude documentation
+README.md
+HELP.md
+
+# Exclude Docker files themselves
+Dockerfile
+docker-compose.yml
+.dockerignore

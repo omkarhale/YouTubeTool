@@ -31,3 +31,35 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Environment Variables ###
+.env
+*.env
+.env.local
+.env.production
+
+### Docker ###
+docker-volumes/
+
+### Windows OS files ###
+Thumbs.db
+Desktop.ini
+
+### Mac OS files ###
+.DS_Store
+```
+
+---
+
+## How to Add
+
+Open `.gitignore` in IntelliJ and paste those lines at the **bottom** of the file.
+
+---
+
+## Your File is Already Covering
+```
+✅ target/          ← compiled code not pushed
+✅ .idea/           ← IntelliJ config not pushed
+✅ *.iml            ← IntelliJ files not pushed
+✅ .mvn/            ← Maven wrapper not pushed

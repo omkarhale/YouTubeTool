@@ -1,0 +1,29 @@
+services:
+
+  # ================================
+  # Your Spring Boot Application
+  # ================================
+  youtube-tool:
+    build: .
+    container_name: youtube-tool-app
+    ports:
+      - "8080:8080"
+    environment:
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY}
+    depends_on:
+      - redis        # Wait for Redis to start before starting app
+    restart: on-failure
+
+  # ================================
+  # Redis Cache Container
+  # ================================
+  # "redis" is the service name
+  # Spring Boot connects using this name
+  # as hostname (spring.data.redis.host=redis)
+  # ================================
+  redis:
+    image: redis:7-alpine    # Lightweight Redis image (~30MB)
+    container_name: youtube-tool-redis
+    ports:
+      - "6379:6379"          # Expose Redis port (useful for debugging)
+    restart: on-failure
